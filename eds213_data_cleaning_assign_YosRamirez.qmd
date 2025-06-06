@@ -1,0 +1,100 @@
+---
+title: "eds213_data_cleaning_assign_YosRamirez"
+author: "Yos Ramirez"
+format: html
+editor: visual
+---
+
+## Data Cleaning for Total Cover 
+
+```{r}
+# Load required libraries
+library(tidyverse)
+
+# Define paths for raw and processed data folders
+datadir_raw <- file.path("data", "raw")
+datadir_processed <- file.path("data", "processed")
+snow_file <- file.path(datadir_raw, "ASDN_Snow_survey.csv")
+
+# Create the processed data directory if it doesn't already exist
+dir.create(datadir_processed, showWarnings = FALSE)
+
+```
+
+```{r}
+# Load the raw snow survey dataset
+snow_raw <- read_csv(snow_file)
+
+```
+
+```{r}
+# Define values to convert to NA
+invalid_entries <- c(".", "-", "n/a", "unk")
+
+# Clean column function to replace strings, convert to numeric, set >100 to NA
+clean_cover_column <- function(column) {
+  column <- case_when(
+    column %in% invalid_entries ~ NA_character_,
+    column == "<1" ~ "0",
+    TRUE ~ column
+  )
+  column <- as.numeric(column)
+  column <- ifelse(column > 100, NA, column)
+  return(column)
+}
+
+# Apply clean column function to all three columns
+snow_clean <- snow_raw %>%
+  mutate(
+    Snow_cover = clean_cover_column(Snow_cover),
+    Water_cover = clean_cover_column(Water_cover),
+    Land_cover = clean_cover_column(Land_cover)
+  )
+
+```
+
+```{r}
+# Fill missing function if one value is missing for the cover types (snow, water, land) to equal 100
+fill_missing <- function(snow, water, land) {
+  covers <- c(snow, water, land)
+  if (sum(is.na(covers)) == 1) {
+    covers[is.na(covers)] <- 100 - sum(covers, na.rm = TRUE)
+  }
+  return(covers)
+}
+
+# Apply missing value logic row by row
+snow_clean[, c("Snow_cover", "Water_cover", "Land_cover")] <- t(apply(
+  snow_clean[, c("Snow_cover", "Water_cover", "Land_cover")], 1,
+  function(row) fill_missing(row[1], row[2], row[3])
+))
+
+# Recalculate total cover
+snow_clean <- snow_clean %>%
+  mutate(Total_cover = Snow_cover + Water_cover + Land_cover)
+
+```
+
+```{r}
+# Write cleaned data to processed folder
+write_csv(snow_clean, file.path(datadir_processed, "all_cover_fixed_YosRamirez.csv"))
+
+```
+
+## Data Cleaning Rationale and Assumptions
+
+To prepare the dataset for ingestion into a database and ensure consistent, high-quality data, I made several key cleaning decisions based on both the data values themselves and reasonable assumptions about the context in which this data was collected. The dataset included various values that clearly indicated missing or unknown data, such as `"."`, `"-"`, `"n/a"`, and `"unk"`. These entries were all converted to `NA` to properly flag them as missing values for downstream analysis.
+
+### Metadata 
+
+After reviewing the dataset and associated metadata, it appears that cover values are reported in percentages and that Snow, Water, and Land cover should combine to represent total surface coverage per observation. There were no explicit units in the raw dataset, but the percentage format was inferred from value ranges and column naming. I assumed that no other columns required transformation for the purpose of this assignment since the focus was on preparing the Snow_cover, Water_cover, and Land_cover fields for database ingestion. These decisions prioritize logical consistency, retain as much usable data as possible, and prepare the dataset for reliable downstream analysis or storage.
+
+### Converting Special Cases
+
+Some entries were listed as `"<1"`, which likely indicates that the true value was between 0 and 1%. In this context, especially when working with percentages, I interpreted this as effectively 0%, and replaced `"<1"` with `"0"` to ensure the data could be converted to numeric format cleanly. Values over 100 were also set to `NA`, under the assumption that no single cover type should exceed 100% coverage on its own, this likely reflects a data entry error or anomaly.
+
+### Single Missing Cover Type
+
+In cases where exactly one of the three cover types was missing, I assumed the total cover should sum to 100%. In those situations, I imputed the missing value by subtracting the sum of the known values from 100. This method is only applied when one value is missing, because if two or more are missing, there are multiple possible solutions and if none are missing, we retain the original data. This approach helps retain more of the original data while ensuring logical consistency without introducing arbitrary assumptions.
+
+
