@@ -23,6 +23,8 @@ This repository is cloned from [MEDS 213 repository](https://github.com/UCSB-Lib
 
 ## Data & File Overview
 
+### File list
+
 | File and Folder Path                            | Description                                   |
 | ----------------------------------------------- | --------------------------------------------- |
 | `data/raw/01_ASDN_Readme.txt`                   | Full ASDN metadata information                |
@@ -31,17 +33,19 @@ This repository is cloned from [MEDS 213 repository](https://github.com/UCSB-Lib
 | `data/processed/all_cover_fixed_YosRamirez.csv` | Cleaned `.csv` version of snow cover data     |
 | `eds213_data_cleaning_assign_YosRamirez.qmd`    | Quarto notebook for snow cover data cleaning  |
 | `eds213_data_cleaning_assign_YosRamirez.html`   | Rendered HTML output from `.qmd`              |
+| `snow_cover.csv`                                | Practice `.csv` and species exploration       |
 | `data-cleaning-practice.qmd`                    | Quarto notebook for practice data cleaning    |
 | `README.md`                                     | Project documentation                         |
 | `bren-meds213-data-cleaning.Rproj`              | RStudio project                               |
 | `docs/`                                         | Folder for published outputs or documentation |
 
-Relationship between files, if important:
+### Relationship between files:
 
-Additional related data collected that was not included in the current
-data package:
+### Additional related data collected  
+No additional data collected
 
-Are there multiple versions of the dataset?
+### Versions of the dataset
+There is only one version of the cleaned dataset `all_cover_fixed_YosRamirez.csv`
 
 ## DATA-SPECIFIC INFORMATION FOR: 
 
