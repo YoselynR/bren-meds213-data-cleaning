@@ -1,5 +1,9 @@
-# Cleaning the shorebird survey data 
+# Cleaning the shorebird survey data - Snow, Cover, and Land Data 
+*This is an assignment for UCSB's MEDS program EDS 213 class.*
 
+## About
+
+This repository contains notebooks for cleaning snow survey data and exploring snow species data. The `data-cleaning-practice.qmd` begins the cleaning 
 
 ## The data set
 
@@ -15,5 +19,78 @@ Data were not collected every year at all sites. Studies of the population ecolo
 
 Data on climatic conditions, prey abundance, and predators were also collected. Environmental data included weather stations that recorded daily climatic conditions, surveys of seasonal snowmelt, weekly sampling of terrestrial and aquatic invertebrates that are prey of shorebirds, live trapping of small mammals (alternate prey for shorebird predators), and daily counts of potential predators (jaegers, falcons, foxes). Detailed field methods for each year are available in the `ASDN_protocol_201X.pdf` files. All research was conducted under permits from relevant federal, state, and university authorities.
 
-See `01_ASDN_Readme.txt` provided in the [course data repository](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-spring-2024-class-data) for full metadata information about this data set.
+This repository is cloned from [MEDS 213 repository](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-data-cleaning) and conatins some of its orginal content. 
+
+## DATA & FILE OVERVIEW
+
+### File list
+
+| File and Folder Path                            | Description                                   |
+| ----------------------------------------------- | --------------------------------------------- |
+| `data/raw/01_ASDN_Readme.txt`                   | Full ASDN metadata information                |
+| `data/raw/ASDN_Snow_species.csv`                | Raw species data from ASDN                    |
+| `data/raw/ASDN_Snow_survey.csv`                 | Raw snow survey data from ASDN                |
+| `data/processed/all_cover_fixed_YosRamirez.csv` | Cleaned `.csv` version of snow cover data     |
+| `eds213_data_cleaning_assign_YosRamirez.qmd`    | Quarto notebook for snow cover data cleaning  |
+| `eds213_data_cleaning_assign_YosRamirez.html`   | Rendered HTML output from `.qmd`              |
+| `snow_cover.csv`                                | Practice cleaning `.csv`                      |
+| `species_presence.csv`                          | Species count `.csv`                          |
+| `data-cleaning-practice.qmd`                    | Quarto notebook for practice and exploration  |
+| `README.md`                                     | Project documentation                         |
+| `bren-meds213-data-cleaning.Rproj`              | RStudio project                               |
+| `docs/`                                         | Folder for published outputs or documentation |
+
+### Relationship between files:
+The notebook `eds213_data_cleaning_assign_YosRamirez.qmd` cleans the `ASDN_Snow_survey.csv` data and produces the `all_cover_fixed_YosRamirez.csv` cleaned dataset.
+
+The notebook `data-cleaning-practice.qmd` produces `snow_cover.csv` from `ASDN_Snow_survey.csv` and `species_presence.csv` from `ASDN_Snow_species.csv`.
+
+The `docs/` folder contains folders and files from different sources.
+
+### Additional related data collected  
+No additional data collected
+
+### Versions of the dataset
+There is only one version of the cleaned dataset `all_cover_fixed_YosRamirez.csv`
+
+## DATA-SPECIFIC INFORMATION FOR: 
+
+**`all_cover_fixed_YosRamirez.csv`**
+
+Number of Variables: 11
+Number of Rows: 42830
+
+| Variable Name | Description                        | Unit and Value Lables      | 
+| ------------- | ---------------------------------- | -------------------------- |
+| `Site`        | Field site abbreviation            | text                       | 
+| `Year`        | Year of observation                | YYYY integer               | 
+| `Date`        | Date of survey                     | DD-MM-YY text              | 
+| `Plot`        | Plot ID within site                | text                       | 
+| `Location`    | Sub-location or site grid cell     | text                       | 
+| `Snow_cover`  | Percent of snow cover observed     | Percent (%) 0 - 100        | 
+| `Water_cover` | Percent of water cover             | Percent (%) 0 - 100        | 
+| `Land_cover`  | Percent of land cover              | Percent (%) 0 - 100        | 
+| `Total_cover` | Sum of snow, water, and land cover | Percent (%) 0 - 100        | 
+| `Observer`    | Initials of observer               | text                       | 
+| `Notes`       | Additional field notes             | text                       | 
+
+Missing data codes: <list code/symbol and definition>
+
+Specialized formats or other abbreviations used:
+
+## SHARING/ACCESS INFORMATION
+
+Licenses/restrictions placed on the data:
+
+Links to publications that cite or use the data:
+
+Links to other publicly accessible locations of the data:
+
+Links/relationships to ancillary data sets: <any supplementary data sources 
+that support analysis or classification of the datasets, eg., plant taxonomy table.)>
+
+Was data derived from another source? If yes, list source(s): <list citations 
+to original sources>
+
+Recommended citation for the project:
 
