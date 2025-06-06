@@ -21,7 +21,7 @@ Data on climatic conditions, prey abundance, and predators were also collected. 
 
 This repository is cloned from [MEDS 213 repository](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-data-cleaning) and conatins some of its orginal content. 
 
-## Data & File Overview
+## DATA & FILE OVERVIEW
 
 ### File list
 
@@ -33,13 +33,15 @@ This repository is cloned from [MEDS 213 repository](https://github.com/UCSB-Lib
 | `data/processed/all_cover_fixed_YosRamirez.csv` | Cleaned `.csv` version of snow cover data     |
 | `eds213_data_cleaning_assign_YosRamirez.qmd`    | Quarto notebook for snow cover data cleaning  |
 | `eds213_data_cleaning_assign_YosRamirez.html`   | Rendered HTML output from `.qmd`              |
-| `snow_cover.csv`                                | Practice `.csv` and species exploration       |
-| `data-cleaning-practice.qmd`                    | Quarto notebook for practice data cleaning    |
+| `snow_cover.csv`                                | Practice cleaning `.csv`                      |
+| `species_presence.csv`                          | Species count `.csv`                          |
+| `data-cleaning-practice.qmd`                    | Quarto notebook for practice and exploration  |
 | `README.md`                                     | Project documentation                         |
 | `bren-meds213-data-cleaning.Rproj`              | RStudio project                               |
 | `docs/`                                         | Folder for published outputs or documentation |
 
 ### Relationship between files:
+The notebook `eds213_data_cleaning_assign_YosRamirez.qmd` cleans the `ASDN_Snow_survey.csv` data and produces the `all_cover_fixed_YosRamirez.csv` cleaned dataset. The notebook `data-cleaning-practice.qmd` produces `snow_cover.csv` from `ASDN_Snow_survey.csv` and `species_presence.csv` from `ASDN_Snow_species.csv`. The `docs/` folder contains folders and files from different sources. 
 
 ### Additional related data collected  
 No additional data collected
