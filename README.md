@@ -19,9 +19,7 @@ Data were not collected every year at all sites. Studies of the population ecolo
 
 Data on climatic conditions, prey abundance, and predators were also collected. Environmental data included weather stations that recorded daily climatic conditions, surveys of seasonal snowmelt, weekly sampling of terrestrial and aquatic invertebrates that are prey of shorebirds, live trapping of small mammals (alternate prey for shorebird predators), and daily counts of potential predators (jaegers, falcons, foxes). Detailed field methods for each year are available in the `ASDN_protocol_201X.pdf` files. All research was conducted under permits from relevant federal, state, and university authorities.
 
-See `01_ASDN_Readme.txt` provided in the [course data repository](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-spring-2024-class-data) for full metadata information about this data set.
-
-
+This repository is cloned from [MEDS 213 repository](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-data-cleaning) and conatins some of its orginal content. 
 
 ## Data & File Overview
 
