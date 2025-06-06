@@ -73,14 +73,14 @@ Number of Variables: 11 - Number of Rows: 42830
 
 ### Missing data code list
 
-| Code        | Meaning                  |
-| ----------- | ------------------------ |
-| *empty*     | not recorded             | *in `.csv`*
-| `NA`        | not recorded             | *in `.csv`*
-| `"."`       | missing or invalid entry |
-| `"--"`      | missing or placeholder   |
-| `"unk"`     | missing or unknown       |
-| `"n/a"`     | not recorded             |
+| Code        | Meaning                  | Notes         |
+| ----------- | ------------------------ | ------------- |
+| *empty*     | not recorded             | *in `.csv`*   |
+| `NA`        | not recorded             | *in `.csv`*   |
+| `"."`       | missing or invalid entry |               |
+| `"--"`      | missing or placeholder   |               |
+| `"unk"`     | missing or unknown       |               |
+| `"n/a"`     | not recorded             |               |
 
 Note: the code for missing value `"."`, `"--"`, `"unk"` and `"n/a"` were turned to `NA` and are not in the cleaned data. Any cover greater than 100 was set to `NA`. A singular missing cover value was recovered by summing all 3 covers to 100. Remaining empty values were unable to be recovered. 
 
