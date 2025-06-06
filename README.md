@@ -74,15 +74,17 @@ Number of Rows: 42830
 
 ### Missing data codes
 
-| Code in CSV | Meaning                  |
+| Code        | Meaning                  |
 | ----------- | ------------------------ |
 | *empty*     | not recorded             |
 | `NA`        | not recorded             |
 | `"."`       | missing or invalid entry |
 | `"--"`      | missing or placeholder   |
 
+Note: the code for missing value `"."` and `"--"` were turned to `NA` and are not in the cleaned data.
 
 ### Specialized formats or other abbreviations used:
+None
 
 ## SHARING/ACCESS INFORMATION
 
