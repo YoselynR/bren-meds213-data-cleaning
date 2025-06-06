@@ -1,15 +1,11 @@
-# Cleaning the shorebird survey data - Snow, Cover, and Land Data 
+# Cleaning the shorebird survey data - Snow, Water, and Land Cover Data 
 *This is an assignment for UCSB's MEDS program EDS 213 class.*
 
 ## About
 
-This repository contains notebooks for cleaning snow survey data and exploring snow species data. The `data-cleaning-practice.qmd` begins the cleaning 
+This repository contains notebooks for cleaning snow survey data and exploring snow species data. The `data-cleaning-practice.qmd` begins the cleaning process in a practice format, and explores the species data. The `eds213_data_cleaning_assign_YosRamirez.qmd` cleans the snow, water, and land cover data and saves a `.csv` for future use. 
 
-## The data set
-
-ARCTIC SHOREBIRD DEMOGRAPHICS NETWORK [https://doi.org/10.18739/A2222R68W](https://doi.org/10.18739/A2222R68W)
-
-Data set hosted by the [NSF Arctic Data Center](https://arcticdata.io) data repository 
+## DATA SET
 
 Field data on shorebird ecology and environmental conditions were collected from 1993-2014 at 16 field sites in Alaska, Canada, and Russia.
 
@@ -19,7 +15,7 @@ Data were not collected every year at all sites. Studies of the population ecolo
 
 Data on climatic conditions, prey abundance, and predators were also collected. Environmental data included weather stations that recorded daily climatic conditions, surveys of seasonal snowmelt, weekly sampling of terrestrial and aquatic invertebrates that are prey of shorebirds, live trapping of small mammals (alternate prey for shorebird predators), and daily counts of potential predators (jaegers, falcons, foxes). Detailed field methods for each year are available in the `ASDN_protocol_201X.pdf` files. All research was conducted under permits from relevant federal, state, and university authorities.
 
-This repository is cloned from [MEDS 213 repository](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-data-cleaning) and conatins some of its orginal content. 
+This repository is cloned from [MEDS 213 Course repository](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-data-cleaning) and conatins some of its orginal content. 
 
 ## DATA & FILE OVERVIEW
 
@@ -76,25 +72,37 @@ Number of Rows: 42830
 | `Observer`    | Initials of observer               | text                       | 
 | `Notes`       | Additional field notes             | text                       | 
 
-### Missing data codes:
-<list code/symbol and definition>
+### Missing data codes
+
+| Code in CSV | Meaning                  |
+| ----------- | ------------------------ |
+| *empty*     | not recorded             |
+| `NA`        | not recorded             |
+| `"."`       | missing or invalid entry |
+| `"--"`      | missing or placeholder   |
+
 
 ### Specialized formats or other abbreviations used:
 
 ## SHARING/ACCESS INFORMATION
 
 ### Licenses/restrictions placed on the data:
+Creative Commons Attribution 4.0 International (CC-BY 4.0) Free to share and adapt data with appropriate credit.
 
 ### Links to publications that cite or use the data:
+[NSF Arctic Data Center - ASDN data](https://arcticdata.io/catalog/view/doi:10.18739/A2222R68W) by the [NSF Arctic Data Center](https://arcticdata.io) repository
 
 ### Links to other publicly accessible locations of the data:
+[MEDS 213 Course repository](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-data-cleaning) 
 
 ### Links/relationships to ancillary data sets: 
-<any supplementary data sources 
-that support analysis or classification of the datasets, eg., plant taxonomy table.)>
+None were used to clean the snow survey data
 
-Was data derived from another source? If yes, list source(s): <list citations 
-to original sources>
+### Citations
 
-### Recommended citation for the project:
+Ruthrauff, D., et al. (2015). Arctic Shorebird Demographics Network. NSF Arctic Data Center. DOI: 10.18739/A2222R68W
+
+### Recommended citation for the cleaned dataset
+
+Ramirez, Y. (2025). Cleaned ASDN snow, water, and land cover data (Week 7 homework, EDS 213). GitHub repository.
 
