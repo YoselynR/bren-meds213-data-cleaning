@@ -53,9 +53,7 @@ There is only one version of the cleaned dataset `all_cover_fixed_YosRamirez.csv
 
 **`all_cover_fixed_YosRamirez.csv`**
 
-Number of Variables: 11
-
-Number of Rows: 42830
+Number of Variables: 11 - Number of Rows: 42830
 
 ### Variable list
 
