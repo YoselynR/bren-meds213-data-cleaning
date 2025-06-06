@@ -1,7 +1,7 @@
 # Cleaning the shorebird survey data - Snow, Water, and Land Cover Data 
 *This is an assignment for UCSB's MEDS program EDS 213 class.*
 
-## About
+## ABOUT
 
 This repository contains notebooks for cleaning snow survey data and exploring snow species data. The `data-cleaning-practice.qmd` begins the cleaning process in a practice format, and explores the species data. The `eds213_data_cleaning_assign_YosRamirez.qmd` cleans the snow, water, and land cover data and saves a `.csv` for future use. 
 
@@ -43,17 +43,18 @@ The notebook `data-cleaning-practice.qmd` produces `snow_cover.csv` from `ASDN_S
 
 The `docs/` folder contains folders and files from different sources.
 
-### Additional related data collected  
+### Additional related data collected:  
 No additional data collected
 
-### Versions of the dataset
+### Versions of the dataset:
 There is only one version of the cleaned dataset `all_cover_fixed_YosRamirez.csv`
 
-## DATA-SPECIFIC INFORMATION FOR: 
+## DATA-SPECIFIC INFORMATION FOR 
 
 **`all_cover_fixed_YosRamirez.csv`**
 
 Number of Variables: 11
+
 Number of Rows: 42830
 
 ### Variable list
@@ -72,7 +73,7 @@ Number of Rows: 42830
 | `Observer`    | Initials of observer               | text                       | 
 | `Notes`       | Additional field notes             | text                       | 
 
-### Missing data codes
+### Missing data code list
 
 | Code        | Meaning                  |
 | ----------- | ------------------------ |
