@@ -90,7 +90,7 @@ None
 ## SHARING/ACCESS INFORMATION
 
 ### Licenses/restrictions placed on the data:
-Creative Commons Attribution 4.0 International (CC-BY 4.0) Free to share and adapt data with appropriate credit.
+Creative Commons Attribution 4.0 International (CC-BY 4.0) *free to share and adapt data with appropriate credit*
 
 ### Links to publications that cite or use the data:
 [NSF Arctic Data Center - ASDN data](https://arcticdata.io/catalog/view/doi:10.18739/A2222R68W) by the [NSF Arctic Data Center](https://arcticdata.io) repository
