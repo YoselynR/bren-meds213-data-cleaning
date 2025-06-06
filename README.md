@@ -43,7 +43,9 @@ data package:
 
 Are there multiple versions of the dataset?
 
-## DATA-SPECIFIC INFORMATION FOR: all_cover_fixed_YosRamirez.csv
+## DATA-SPECIFIC INFORMATION FOR: 
+
+**`all_cover_fixed_YosRamirez.csv`**
 
 Number of Variables: 11
 Number of Rows: 42830
