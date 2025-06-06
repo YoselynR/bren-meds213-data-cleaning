@@ -15,7 +15,7 @@ Data were not collected every year at all sites. Studies of the population ecolo
 
 Data on climatic conditions, prey abundance, and predators were also collected. Environmental data included weather stations that recorded daily climatic conditions, surveys of seasonal snowmelt, weekly sampling of terrestrial and aquatic invertebrates that are prey of shorebirds, live trapping of small mammals (alternate prey for shorebird predators), and daily counts of potential predators (jaegers, falcons, foxes). Detailed field methods for each year are available in the `ASDN_protocol_201X.pdf` files. All research was conducted under permits from relevant federal, state, and university authorities.
 
-This repository is cloned from [MEDS 213 Course repository](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-data-cleaning) and conatins some of its orginal content. 
+This repository is cloned from [MEDS 213 Course repository](https://github.com/UCSB-Library-Research-Data-Services/bren-meds213-data-cleaning) and conatins some of its orginal content. Credit is given to where it belongs. 
 
 ## DATA & FILE OVERVIEW
 
@@ -76,12 +76,14 @@ Number of Rows: 42830
 
 | Code        | Meaning                  |
 | ----------- | ------------------------ |
-| *empty*     | not recorded             |
-| `NA`        | not recorded             |
+| *empty*     | not recorded             | *in `.csv`*
+| `NA`        | not recorded             | *in `.csv`*
 | `"."`       | missing or invalid entry |
 | `"--"`      | missing or placeholder   |
+| `"unk"`     | missing or unknown       |
+| `"n/a"`     | not recorded             |
 
-Note: the code for missing value `"."` and `"--"` were turned to `NA` and are not in the cleaned data.
+Note: the code for missing value `"."`, `"--"`, `"unk"` and `"n/a"` were turned to `NA` and are not in the cleaned data. Any cover greater than 100 was set to `NA`. A singular missing cover value was recovered by summing all 3 covers to 100. Remaining empty values were unable to be recovered. 
 
 ### Specialized formats or other abbreviations used:
 None
