@@ -60,6 +60,8 @@ There is only one version of the cleaned dataset `all_cover_fixed_YosRamirez.csv
 Number of Variables: 11
 Number of Rows: 42830
 
+### Variable list
+
 | Variable Name | Description                        | Unit and Value Lables      | 
 | ------------- | ---------------------------------- | -------------------------- |
 | `Site`        | Field site abbreviation            | text                       | 
@@ -74,23 +76,25 @@ Number of Rows: 42830
 | `Observer`    | Initials of observer               | text                       | 
 | `Notes`       | Additional field notes             | text                       | 
 
-Missing data codes: <list code/symbol and definition>
+### Missing data codes:
+<list code/symbol and definition>
 
-Specialized formats or other abbreviations used:
+### Specialized formats or other abbreviations used:
 
 ## SHARING/ACCESS INFORMATION
 
-Licenses/restrictions placed on the data:
+### Licenses/restrictions placed on the data:
 
-Links to publications that cite or use the data:
+### Links to publications that cite or use the data:
 
-Links to other publicly accessible locations of the data:
+### Links to other publicly accessible locations of the data:
 
-Links/relationships to ancillary data sets: <any supplementary data sources 
+### Links/relationships to ancillary data sets: 
+<any supplementary data sources 
 that support analysis or classification of the datasets, eg., plant taxonomy table.)>
 
 Was data derived from another source? If yes, list source(s): <list citations 
 to original sources>
 
-Recommended citation for the project:
+### Recommended citation for the project:
 
