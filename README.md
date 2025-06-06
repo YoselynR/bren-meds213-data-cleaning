@@ -61,7 +61,7 @@ Number of Variables: 11 - Number of Rows: 42830
 | ------------- | ---------------------------------- | -------------------------- |
 | `Site`        | Field site abbreviation            | text                       | 
 | `Year`        | Year of observation                | YYYY integer               | 
-| `Date`        | Date of survey                     | DD-MM-YY text              | 
+| `Date`        | Date of survey                     | DD-MMM-YY text             | 
 | `Plot`        | Plot ID within site                | text                       | 
 | `Location`    | Sub-location or site grid cell     | text                       | 
 | `Snow_cover`  | Percent of snow cover observed     | Percent (%) 0 - 100        | 
