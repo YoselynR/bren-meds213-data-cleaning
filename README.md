@@ -41,7 +41,9 @@ This repository is cloned from [MEDS 213 repository](https://github.com/UCSB-Lib
 | `docs/`                                         | Folder for published outputs or documentation |
 
 ### Relationship between files:
-The notebook `eds213_data_cleaning_assign_YosRamirez.qmd` cleans the `ASDN_Snow_survey.csv` data and produces the `all_cover_fixed_YosRamirez.csv` cleaned dataset. The notebook `data-cleaning-practice.qmd` produces `snow_cover.csv` from `ASDN_Snow_survey.csv` and `species_presence.csv` from `ASDN_Snow_species.csv`. The `docs/` folder contains folders and files from different sources. 
+The notebook `eds213_data_cleaning_assign_YosRamirez.qmd` cleans the `ASDN_Snow_survey.csv` data and produces the `all_cover_fixed_YosRamirez.csv` cleaned dataset. 
+The notebook `data-cleaning-practice.qmd` produces `snow_cover.csv` from `ASDN_Snow_survey.csv` and `species_presence.csv` from `ASDN_Snow_species.csv`. 
+The `docs/` folder contains folders and files from different sources. 
 
 ### Additional related data collected  
 No additional data collected
